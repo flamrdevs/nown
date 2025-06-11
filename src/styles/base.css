@@ -1,0 +1,27 @@
+:root {
+  --xn-1: #111113;
+  --xn-2: #19191b;
+  --xn-3: #232225;
+  --xn-4: #2a292d;
+  --xn-5: #313036;
+  --xn-6: #3b3a3f;
+  --xn-7: #48474e;
+  --xn-8: #615f69;
+  --xn-9: #6f6d78;
+  --xn-10: #7c7a85;
+  --xn-11: #b4b3bd;
+  --xn-12: #eeeef0;
+
+  --xn-contrast: #ffffff;
+  --xn-surface: rgba(0, 0, 0, 0.05);
+  --xn-indicator: #6f6d78;
+  --xn-track: #6f6d78;
+}
+
+body {
+  font-family: "Epilogue Variable", sans-serif;
+  font-weight: 500;
+  background-color: var(--xn-1);
+  color: var(--xn-12);
+  user-select: none;
+}

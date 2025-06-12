@@ -2,9 +2,7 @@
   import NumberFlow, { NumberFlowGroup } from "@number-flow/svelte";
   import { onMount } from "svelte";
 
-  const get = () => {
-    const date = new Date();
-
+  const toState = (date: Date) => {
     return {
       h: date.getHours(),
       m: date.getMinutes(),
@@ -12,7 +10,7 @@
     };
   };
 
-  const initial = get();
+  const initial = toState(new Date());
 
   let h = $state(initial.h);
   let m = $state(initial.m);
@@ -20,7 +18,9 @@
 
   onMount(() => {
     const callback = () => {
-      const next = get();
+      const date = new Date();
+      date.setMilliseconds(date.getMilliseconds() + 250);
+      const next = toState(date);
       if (next.h !== h) h = next.h;
       if (next.m !== m) m = next.m;
       if (next.s !== s) s = next.s;

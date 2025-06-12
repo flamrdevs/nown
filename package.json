@@ -9,17 +9,22 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
   },
-  "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^5.0.3",
-    "@tsconfig/svelte": "^5.0.4",
-    "svelte": "^5.28.1",
-    "svelte-check": "^4.1.6",
-    "typescript": "~5.8.3",
-    "vite": "^6.3.5"
-  },
   "dependencies": {
-    "@fontsource-variable/epilogue": "^5.2.6",
-    "@number-flow/svelte": "^0.3.9"
+    "@fontsource-variable/epilogue": "5.2.6",
+    "@number-flow/svelte": "0.3.9"
   },
-  "packageManager": "pnpm@10.10.0"
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "5.1.0",
+    "@tsconfig/svelte": "5.0.4",
+    "svelte": "5.34.1",
+    "svelte-check": "4.2.1",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
+  }
 }
